@@ -1,0 +1,16 @@
+{
+  "name": "voltloop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "European circular battery marketplace and tamper-evident passport prototype",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

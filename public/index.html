@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090D16">
+  <meta name="description" content="VoltLoop circular battery operations and digital passport network.">
+  <title>VoltLoop | Circular Battery Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;450;500;550;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>if (window.tailwind) tailwind.config = { corePlugins: { preflight: false } };</script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="role-bar">
+    <span class="demo-label"><span class="live-dot"></span> DEMO WORKSPACE</span>
+    <nav id="role-switcher" aria-label="Switch user portal">
+      <button data-role="admin" class="role-button active"><i data-lucide="shield-check"></i>Admin</button>
+      <button data-role="oem" class="role-button"><i data-lucide="factory"></i>OEM</button>
+      <button data-role="service_centre" class="role-button"><i data-lucide="wrench"></i>Service Centre</button>
+      <button data-role="recycler" class="role-button"><i data-lucide="recycle"></i>Recycler</button>
+      <button data-role="logistics" class="role-button"><i data-lucide="truck"></i>Logistics Provider</button>
+    </nav>
+    <span class="demo-region">EU <span class="region-divider">/</span> EUR</span>
+  </div>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="VoltLoop home"><span class="brand-mark"><i data-lucide="battery-charging"></i></span>VoltLoop<span class="brand-dot">.</span></a>
+    <div class="workspace-label">CIRCULAR BATTERY NETWORK</div>
+    <div id="portal-label" class="sidebar-label">CONTROL TOWER</div>
+    <nav id="sidebar-nav" aria-label="Workspace navigation"></nav>
+    <div class="sidebar-bottom">
+      <div class="network-asset"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=600&q=80" alt="Electric vehicle connected to a charging station" loading="lazy"><span>EUROPEAN EV ECOSYSTEM</span></div>
+      <div class="network-status"><span class="live-dot"></span> Network operational <i data-lucide="arrow-up-right"></i></div>
+      <div class="sidebar-foot">VoltLoop Network <span>v1.0</span></div>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="workspace-header">
+      <div class="breadcrumb"><i data-lucide="grid-2x2"></i><span id="breadcrumb">Control tower</span><span>/</span><strong id="breadcrumb-view">Overview</strong></div>
+      <div class="header-controls"><span class="network-chip"><span class="live-dot"></span> Live network</span><button class="icon-button" data-action="refresh" aria-label="Refresh workspace" title="Refresh workspace"><i data-lucide="refresh-cw"></i></button><div class="header-divider"></div><span id="avatar" class="avatar">EF</span><select id="organization" aria-label="Active organization"></select></div>
+    </header>
+    <main id="app" tabindex="-1"><div class="loading-state"><i data-lucide="loader-circle"></i>Connecting to VoltLoop...</div></main>
+    <footer class="workspace-footer"><span><span class="live-dot"></span> SHA-256 linked ledger <span class="footer-dot">/</span> EU battery regulation 2023/1542</span><span id="sync-time"></span></footer>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-header"><div><span class="eyebrow" id="modal-eyebrow">DIGITAL BATTERY PASSPORT</span><h2 id="modal-title"></h2></div><button class="icon-button" data-action="close-modal" aria-label="Close dialog" title="Close dialog"><i data-lucide="x"></i></button></div><div id="modal-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

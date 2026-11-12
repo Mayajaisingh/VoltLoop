@@ -1,0 +1,5 @@
+node_modules/
+voltloop.db
+voltloop.db-shm
+voltloop.db-wal
+test-results/
